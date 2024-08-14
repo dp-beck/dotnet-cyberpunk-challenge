@@ -22,11 +22,11 @@ namespace DotnetChallenge
         }
 
         void Challenge0() {
-            Console.WriteLine(); // TODO part 1 - Add a string of your choice, whatever you want
+            Console.WriteLine("Hello there!!!!"); // TODO part 1 - Add a string of your choice, whatever you want
         }
 
 
-        /*TODO something is missing*/ Challenge1() {
+        public List<string> Challenge1() {
    
             // objective: You've been tasked with taking an encrypted string that an operative discovered. We need to store it in
             // a List so it can be grabbed by another operative later but some pieces are missing. 
@@ -34,9 +34,9 @@ namespace DotnetChallenge
 
             string encryptedString = "c64bd807291151fae7b7cd0c5ede51761f165b231da7bceac64fd90e041344d4";
 
-            List<> listOfEncryptedStrings = ; // TODO part 1 - Make a list that is going to contain strings
+            List<string> listOfEncryptedStrings = new List<string>(); // TODO part 1 - Make a list that is going to contain strings
             
-            listOfEncryptedStrings.Add(); // TODO part 2 - We need to add the encrypted string to this list
+            listOfEncryptedStrings.Add(encryptedString); // TODO part 2 - We need to add the encrypted string to this list
 
             return listOfEncryptedStrings;
         }
@@ -53,11 +53,11 @@ namespace DotnetChallenge
                 "WWVzLCBJIGFtIGEgY3JpbWluYWwuIE15IGNyaW1lIGlzIHRoYXQgb2YgY3VyaW9zaXR5LiBJIGFtIGEgaGFja2VyLCBhbmQgdGhpcyBpcyBteSBtYW5pZmVzdG8u"
             };
 
-            foreach(int encodedStr in encodedStrings) {  // TODO - hmmm...something is wonky..
+            foreach (string encodedStr in encodedStrings) {  // TODO - hmmm...something is wonky..
                 byte[] data = Convert.FromBase64String(encodedStr);
                 string decodedString = System.Text.Encoding.UTF8.GetString(data);
                 
-                Console.WriteLine("Is something missing?? Where's my data!?"); // TODO - You probably want to print out each decoded string
+                Console.WriteLine(decodedString); // TODO - You probably want to print out each decoded string
             }
         }
 
@@ -73,12 +73,12 @@ namespace DotnetChallenge
                 "V2hlbiB0aGUgcGFzdCBpcyBhbHdheXMgd2l0aCB5b3UsIGl0IG1heSBhcyB3ZWxsIGJlIHByZXNlbnQ7IGFuZCBpZiBpdCBpcyBwcmVzZW50LCBpdCB3aWxsIGJlIGZ1dHVyZSBhcyB3ZWxsLg=="
             };
 
-            for (int  = 0; index < 3; index++) {
-                string secret = secretStrings[SOMETHING]; // TODO - I think SOMETHING is off *wink*
+            for (int index = 0; index < 3; index++) {
+                string secret = secretStrings[index]; // TODO - I think SOMETHING is off *wink*
                 byte[] data = Convert.FromBase64String(secret);
                 string decodedString = System.Text.Encoding.UTF8.GetString(data);
                 
-                Console.WriteLine("Is something missing?? Where's my data!?"); // TODO - You probably want to print out each decoded string
+                Console.WriteLine(decodedString); // TODO - You probably want to print out each decoded string
             }
         }
 
@@ -96,11 +96,11 @@ namespace DotnetChallenge
             };
 
             int index = 0;
-            while( < iceLocations.Length) { // TODO: What's missing?
-                string iceLocation = iceLocations[SOMETHING]; // TODO: SOMETHING is definitely off...
+            while(index < iceLocations.Length) { // TODO: What's missing?
+                string iceLocation = iceLocations[index]; // TODO: SOMETHING is definitely off...
                 IceBreaker.BreakIce(iceLocation);
                 
-                index--; // TODO: Something is off here? How many times is this loop going to iterate?
+                index++; // TODO: Something is off here? How many times is this loop going to iterate?
             }
         }
 
@@ -118,6 +118,10 @@ namespace DotnetChallenge
             };
 
             // TODO: we have the data but it needs to be looped and printed...hmm....
+            foreach (string user in vulnerableUsers)
+            {
+                System.Console.WriteLine(user);
+            }
         }
     }
 }
